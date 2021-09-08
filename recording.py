@@ -102,7 +102,7 @@ if __name__ == "__main__":
     try:
         r = Recorder(chunksize=2048)
         r.open_stream()
-        with open("./sentences.txt", "r") as f:
+        with open("./sentences.txt", "r", encoding= "utf8") as f:
             content = [item.strip().split("|  ") for item in f.readlines()]
         start = input(">>> Please input the index to start (default: 0): ")
         if not start:
